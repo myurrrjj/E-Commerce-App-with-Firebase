@@ -354,11 +354,6 @@ Contributions, issues, and feature requests are welcome. Please open an issue fi
 
 ---
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
 
 <div align="center">
 
