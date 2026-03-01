@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "320011651191",
+    "project_id": "koshi-48939",
+    "storage_bucket": "koshi-48939.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320011651191:android:702d04234962e98c8e9e72",
+        "android_client_info": {
+          "package_name": "com.example.koshi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP_nV_pRtyPT4tdkc9xeZiTlY9SSliT-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
