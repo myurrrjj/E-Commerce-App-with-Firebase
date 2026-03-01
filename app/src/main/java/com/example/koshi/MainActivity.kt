@@ -10,6 +10,7 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
@@ -23,6 +24,8 @@ import androidx.core.view.WindowCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.navigation.compose.rememberNavController
+import com.example.koshi.screens.Homescreen.HomeViewModel
+import com.example.koshi.screens.authScreen.AuthViewModel
 import com.example.koshi.ui.navhost.KoshiApp
 import com.example.koshi.ui.navhost.KoshiNavHost
 import com.example.koshi.ui.theme.KoshiTheme
@@ -30,13 +33,16 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    private val homeViewModel: HomeViewModel by viewModels()
+    private val authViewModel: AuthViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
-        // --- STEP 1: Configure the window for edge-to-edge display ONCE. ---
         enableEdgeToEdge()
 
         super.onCreate(savedInstanceState)
 
-        // Set the preferred refresh rate
+        homeViewModel
+        authViewModel
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             val display = this.display
             val supportedRefreshRates = display?.supportedModes?.map { it.refreshRate } ?: emptyList()
@@ -49,13 +55,11 @@ class MainActivity : ComponentActivity() {
                 window.attributes = layoutParams
             }
         }
-
+//        private val homeViewModel: HomeViewModel by viewModels()
+//        private val authViewModel: AuthViewModel by viewModels()
         setContent {
             val darkTheme = isSystemInDarkTheme()
 
-            // --- STEP 2: Control the APPEARANCE of the system bars inside Compose. ---
-            // This effect will correctly update the system bar icons (making them light or dark)
-            // whenever the theme changes, without re-configuring the window layout.
             val view = LocalView.current
             DisposableEffect(darkTheme) {
                 val window = (view.context as ComponentActivity).window

@@ -27,7 +27,7 @@ class KoshiApplication : Application(), ImageLoaderFactory {
                     .build()
             }
             .respectCacheHeaders(false)
-            .logger(DebugLogger())
+//            .logger(DebugLogger())
             .build()
     }
 }

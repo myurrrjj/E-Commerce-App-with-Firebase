@@ -37,21 +37,21 @@ object AppModule {
         return OfflineCartRepository()
     }
 
-    @Provides
-    @Singleton
-    fun provideImageLoader(
-        @ApplicationContext context: Context
-    ): ImageLoader {
-        return ImageLoader.Builder(context)
-            .diskCache {
-                DiskCache.Builder()
-                    .directory(context.cacheDir.resolve("image_cache"))
-                    .maxSizePercent(0.1)
-                    .build()
-            }
-            .respectCacheHeaders(false)
-            .build()
-    }
+//    @Provides
+//    @Singleton
+//    fun provideImageLoader(
+//        @ApplicationContext context: Context
+//    ): ImageLoader {
+//        return ImageLoader.Builder(context)
+//            .diskCache {
+//                DiskCache.Builder()
+//                    .directory(context.cacheDir.resolve("image_cache"))
+//                    .maxSizePercent(0.1)
+//                    .build()
+//            }
+//            .respectCacheHeaders(false)
+//            .build()
+//    }
 
 
 }
