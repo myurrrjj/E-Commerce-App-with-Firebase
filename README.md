@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌿 Koshi
+# 🌿 Plant E-Commerce App
 
 ### *Your smart plant companion — shop, care, and diagnose, all in one place.*
 
@@ -12,7 +12,23 @@
 
 <br/>
 
-> Koshi is a full-featured Android e-commerce and plant health application built entirely with **Jetpack Compose**, following modern Android architecture principles. Browse and purchase plants and gardening services, book appointments, manage your delivery addresses, and use an on-device AI camera to diagnose plant diseases — all wrapped in a polished, animation-rich UI.
+> A full-featured Android e-commerce and plant health application built entirely with **Jetpack Compose**, following modern Android architecture principles. Browse and purchase plants and gardening services, book appointments, manage your delivery addresses, and use an on-device AI camera to diagnose plant diseases — all wrapped in a polished, animation-rich UI.
+
+</div>
+
+---
+
+
+## 📸 Screenshots
+
+<div align="center">
+
+| | | |
+|:---:|:---:|:---:|
+| <img width="200" alt="Screenshot 1" src="https://github.com/user-attachments/assets/926a913c-545e-4092-a76a-e225098cee12" /> | <img width="200" alt="Screenshot 2" src="https://github.com/user-attachments/assets/c27cc78d-c73a-4870-ad0e-e45b9ee7a023" /> | <img width="200" alt="Screenshot 3" src="https://github.com/user-attachments/assets/6c906618-e0d0-42a2-aae2-cd9bd16060e4" /> |
+| <img width="200" alt="Screenshot 4" src="https://github.com/user-attachments/assets/73ff3ac6-cdba-4c73-8be0-a3e2fbef1dc7" /> | <img width="200" alt="Screenshot 5" src="https://github.com/user-attachments/assets/d27ada98-0f8d-4b8f-96ac-ba1d29fb480b" /> | <img width="200" alt="Screenshot 6" src="https://github.com/user-attachments/assets/bd2a40b4-abdc-4677-b730-7ea554d394f1" /> |
+| <img width="200" alt="Screenshot 7" src="https://github.com/user-attachments/assets/1f3e8e2f-4b77-4bc1-88b3-b0a0da69592e" /> | <img width="200" alt="Screenshot 8" src="https://github.com/user-attachments/assets/9caff974-ed3f-4368-95f1-21c5d5e8d04e" /> | <img width="200" alt="Screenshot 9" src="https://github.com/user-attachments/assets/0830a578-9902-4568-ab6c-233c8f8e4f9e" /> |
+| <img width="200" alt="Screenshot 10" src="https://github.com/user-attachments/assets/4d0cc156-d131-46e4-a811-3c256f4957ab" /> | <img width="200" alt="Screenshot 11" src="https://github.com/user-attachments/assets/4c3f6b12-dced-4373-b1cf-decf25743935" /> | <img width="200" alt="Screenshot 12" src="https://github.com/user-attachments/assets/3a588755-5f96-4ddb-aef2-23b06e3c2211" /> |
 
 </div>
 
@@ -54,7 +70,7 @@ Build           → Gradle (Kotlin DSL)
 
 ## 🏛️ Architecture
 
-Koshi is built on **MVVM with a clean Repository layer**, scoped with Hilt for dependency injection.
+Built on **MVVM with a clean Repository layer**, scoped with Hilt for dependency injection.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -245,7 +261,7 @@ Every route has a purpose-built transition in `NavAnimations.kt`:
 ## 📁 Project Structure
 
 ```
-com.example.koshi/
+com.example.app/
 │
 ├── dependency/              # Hilt DI modules
 │   ├── AppModule.kt         # PlantRepository, CartRepository, ImageLoader
@@ -285,7 +301,7 @@ com.example.koshi/
     ├── AppDestinations.kt   # Route enum
     ├── AppNav.kt            # NavHost + SharedTransitionLayout
     ├── NavAnimations.kt     # All custom enter/exit transitions
-    └── KoshiApp.kt
+    └── AppRoot.kt
 ```
 
 ---
@@ -303,8 +319,8 @@ com.example.koshi/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/koshi.git
-   cd koshi
+   git clone https://github.com/yourusername/plant-ecommerce-app.git
+   cd plant-ecommerce-app
    ```
 
 2. **Add Firebase configuration**
@@ -353,7 +369,6 @@ com.example.koshi/
 Contributions, issues, and feature requests are welcome. Please open an issue first to discuss what you'd like to change.
 
 ---
-
 
 <div align="center">
 
